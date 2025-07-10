@@ -199,6 +199,19 @@
                   "new": false,
                   "number": 1,
                   "score": ""
+                },
+                {
+                  "id": "65424c9f-7d34-4d19-88f3-9c70d7f455df",
+                  "title": "DDoS attack",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "An attacker may generate a large volume of traffic to overload the firmware, potentially disrupting or blocking access for legitimate users.",
+                  "mitigation": "If a malformed packet that does not follow the proper protocol is received on the connection request port, the connection is immediately terminated and the system waits for the next request.\n\nIf a valid connection procedure is completed on the connection request port, a random port is then opened for service communication and provided to the user. The user then establishes a new connection through this port to continue communication.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
                 }
               ],
               "threatFrequency": {
@@ -206,9 +219,16 @@
                 "tampering": 1,
                 "repudiation": 0,
                 "informationDisclosure": 0,
-                "denialOfService": 0,
+                "denialOfService": 1,
                 "elevationOfPrivilege": 0
               }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -332,7 +352,27 @@
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "71afd659-404a-4e70-93f7-a5cd09ebaa13",
+                  "title": "Data leakage and tampering in internal storage",
+                  "status": "Mitigated",
+                  "severity": "Low",
+                  "type": "Information disclosure",
+                  "description": "Data stored in internal storage may be leaked externally or accessed and tampered with by unauthorized users.",
+                  "mitigation": "All communication ports and physical interfaces that allow direct access to internal storage, such as FTP and SSH, are blocked to prevent unauthorized access by attackers.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             }
           },
           {
@@ -573,57 +613,6 @@
                 "sourceMarker": {
                   "name": ""
                 },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Command",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "Command"
-            ],
-            "id": "9e1271de-e80e-4086-96cc-8ab11c5e17bb",
-            "source": {
-              "cell": "8dc60046-1a5f-4157-89bd-1542c2b123a6",
-              "port": "9d124b2c-da3b-4e14-a909-a03f9abf69d6"
-            },
-            "target": {
-              "cell": "74895bc9-b644-4cb7-a2e2-a5f43e3241fc",
-              "port": "e688dfdb-71e8-4db6-8f2c-6d60e5fb4b44"
-            },
-            "vertices": [
-              {
-                "x": 480,
-                "y": 330
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
                 "strokeDasharray": "4 3"
               }
             },
@@ -831,6 +820,103 @@
             "target": {
               "cell": "ac0de558-6df2-488b-ab67-f670fea429ee",
               "port": "3a397fc8-61ab-43da-804b-08ff0a64b3c0"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Response",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Response"
+            ],
+            "id": "9e1271de-e80e-4086-96cc-8ab11c5e17bb",
+            "source": {
+              "cell": "8dc60046-1a5f-4157-89bd-1542c2b123a6",
+              "port": "9d124b2c-da3b-4e14-a909-a03f9abf69d6"
+            },
+            "target": {
+              "cell": "74895bc9-b644-4cb7-a2e2-a5f43e3241fc",
+              "port": "e688dfdb-71e8-4db6-8f2c-6d60e5fb4b44"
+            },
+            "vertices": [
+              {
+                "x": 480,
+                "y": 330
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Request",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Request"
+            ],
+            "id": "63dec439-a7a6-4cf0-89d5-4cb46102ace7",
+            "source": {
+              "cell": "74895bc9-b644-4cb7-a2e2-a5f43e3241fc",
+              "port": "e688dfdb-71e8-4db6-8f2c-6d60e5fb4b44"
+            },
+            "target": {
+              "cell": "8dc60046-1a5f-4157-89bd-1542c2b123a6",
+              "port": "9d124b2c-da3b-4e14-a909-a03f9abf69d6"
             },
             "vertices": []
           },
@@ -1317,6 +1403,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 3
+    "threatTop": 6
   }
 }
