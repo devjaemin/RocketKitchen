@@ -379,13 +379,6 @@
                 "informationDisclosure": 1,
                 "denialOfService": 0
               }
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -569,61 +562,6 @@
                   "name": "block"
                 },
                 "sourceMarker": {
-                  "name": "block"
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "System configuration data\nStand-Alone Image data",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": true,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "System configuration data\nStand-Alone Image data"
-            ],
-            "id": "ef1c4397-89a7-4d23-9f82-ee3bcacb728a",
-            "source": {
-              "cell": "8dc60046-1a5f-4157-89bd-1542c2b123a6",
-              "port": "b1d77f89-b93e-4f8c-b772-ec758cef1b48"
-            },
-            "target": {
-              "cell": "c3f40951-4b56-47f1-a2d4-be17d38d66be",
-              "port": "478587db-345f-4ee4-a06b-58f4fc696252"
-            },
-            "vertices": [
-              {
-                "x": 290,
-                "y": 410
-              },
-              {
-                "x": 200,
-                "y": 430
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
                   "name": ""
                 },
                 "strokeDasharray": "4 3"
@@ -767,84 +705,6 @@
                   "name": "block"
                 },
                 "sourceMarker": {
-                  "name": "block"
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Communication",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": true,
-              "isEncrypted": true,
-              "isPublicNetwork": true,
-              "protocol": "TCP/IP Protocol",
-              "threats": [
-                {
-                  "id": "c18cbea8-5f31-4aee-9d91-1e2399071134",
-                  "title": "Communication packet data disclosure",
-                  "status": "Mitigated",
-                  "severity": "High",
-                  "type": "Information disclosure",
-                  "description": "Communication packets may be exposed through tools such as network interface capture tools, potentially leaking sensitive data to an attacker.",
-                  "mitigation": "Communication packets are encrypted using symmetric key encryption based on an AES key that is randomly generated during the initial connection phase. As a result, even if packets are captured externally, their contents cannot be interpreted.\nAdditionally, a random IV (Initialization Vector) is included with each transmission, ensuring that even if the same data is sent again, the encrypted output differs each time, making inference impossible.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 2,
-                  "score": ""
-                },
-                {
-                  "id": "2b5329b8-b755-424e-b608-37e419ff62ee",
-                  "title": "Packet data tampering",
-                  "status": "Mitigated",
-                  "severity": "High",
-                  "type": "Tampering",
-                  "description": "An attacker may intercept a packet, modify its contents, and forward it.",
-                  "mitigation": "Every packet includes an HMAC-SHA256 value for integrity verification, which allows detection of any tampering. The HMAC-SHA256 key is randomly generated during the initial connection establishment.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 3,
-                  "score": ""
-                }
-              ],
-              "threatFrequency": {
-                "tampering": 1,
-                "informationDisclosure": 1,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "Communication"
-            ],
-            "id": "093b8f81-6cee-4f59-8afa-906f3bbf94bc",
-            "source": {
-              "cell": "74895bc9-b644-4cb7-a2e2-a5f43e3241fc",
-              "port": "9b92193b-4f16-4c3a-bc78-0b77a9390a50"
-            },
-            "target": {
-              "cell": "ac0de558-6df2-488b-ab67-f670fea429ee",
-              "port": "3a397fc8-61ab-43da-804b-08ff0a64b3c0"
-            },
-            "vertices": []
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
                   "name": ""
                 },
                 "strokeDasharray": null
@@ -935,6 +795,139 @@
               {
                 "x": 400,
                 "y": 400
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Communication",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": true,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "TCP/IP Protocol",
+              "threats": [
+                {
+                  "id": "c18cbea8-5f31-4aee-9d91-1e2399071134",
+                  "title": "Communication packet data disclosure",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Communication packets may be exposed through tools such as network interface capture tools, potentially leaking sensitive data to an attacker.",
+                  "mitigation": "Communication packets are encrypted using symmetric key encryption based on an AES key that is randomly generated during the initial connection phase. As a result, even if packets are captured externally, their contents cannot be interpreted.\nAdditionally, a random IV (Initialization Vector) is included with each transmission, ensuring that even if the same data is sent again, the encrypted output differs each time, making inference impossible.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": ""
+                },
+                {
+                  "id": "2b5329b8-b755-424e-b608-37e419ff62ee",
+                  "title": "Packet data tampering",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "An attacker may intercept a packet, modify its contents, and forward it.",
+                  "mitigation": "Every packet includes an HMAC-SHA256 value for integrity verification, which allows detection of any tampering. The HMAC-SHA256 key is randomly generated during the initial connection establishment.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Communication"
+            ],
+            "id": "093b8f81-6cee-4f59-8afa-906f3bbf94bc",
+            "source": {
+              "cell": "74895bc9-b644-4cb7-a2e2-a5f43e3241fc",
+              "port": "9b92193b-4f16-4c3a-bc78-0b77a9390a50"
+            },
+            "target": {
+              "cell": "ac0de558-6df2-488b-ab67-f670fea429ee",
+              "port": "3a397fc8-61ab-43da-804b-08ff0a64b3c0"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "System configuration data\nSystem log data\nTemporary image data",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "System configuration data\nSystem log data\nTemporary image data"
+            ],
+            "id": "ef1c4397-89a7-4d23-9f82-ee3bcacb728a",
+            "source": {
+              "cell": "8dc60046-1a5f-4157-89bd-1542c2b123a6",
+              "port": "b1d77f89-b93e-4f8c-b772-ec758cef1b48"
+            },
+            "target": {
+              "cell": "c3f40951-4b56-47f1-a2d4-be17d38d66be",
+              "port": "478587db-345f-4ee4-a06b-58f4fc696252"
+            },
+            "vertices": [
+              {
+                "x": 290,
+                "y": 410
+              },
+              {
+                "x": 200,
+                "y": 430
               }
             ]
           },
