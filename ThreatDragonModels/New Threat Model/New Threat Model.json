@@ -222,13 +222,6 @@
                 "denialOfService": 1,
                 "elevationOfPrivilege": 0
               }
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -365,6 +358,19 @@
                   "new": false,
                   "number": 4,
                   "score": ""
+                },
+                {
+                  "id": "6fc4b01a-48a2-43c6-b915-09dae76a4f62",
+                  "title": "Privilege elevation to gain system access/control",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Elevation of privilege",
+                  "description": "An attacker may attempt to access the system by using the root account or by creating additional user accounts and granting them elevated privileges.",
+                  "mitigation": "All ports except those opened through a legitimate connection procedure are blocked, and system access through them is not allowed.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 7,
+                  "score": ""
                 }
               ],
               "threatFrequency": {
@@ -373,6 +379,13 @@
                 "informationDisclosure": 1,
                 "denialOfService": 0
               }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -918,7 +931,12 @@
               "cell": "8dc60046-1a5f-4157-89bd-1542c2b123a6",
               "port": "9d124b2c-da3b-4e14-a909-a03f9abf69d6"
             },
-            "vertices": []
+            "vertices": [
+              {
+                "x": 400,
+                "y": 400
+              }
+            ]
           },
           {
             "position": {
@@ -1403,6 +1421,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 6
+    "threatTop": 7
   }
 }
