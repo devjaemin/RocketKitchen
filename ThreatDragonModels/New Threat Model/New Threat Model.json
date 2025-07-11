@@ -721,98 +721,6 @@
                 "sourceMarker": {
                   "name": "block"
                 },
-                "strokeDasharray": "4 3"
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "",
-              "description": "",
-              "outOfScope": true,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": true,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              ""
-            ],
-            "id": "e780ac97-0174-43d6-86ce-060334de25e2",
-            "source": {
-              "cell": "23e35263-a361-4871-aa3c-18350f94504f",
-              "port": "8113ea95-cb0e-44b9-ae39-ae355247c2fd"
-            },
-            "target": {
-              "cell": "ac0de558-6df2-488b-ab67-f670fea429ee",
-              "port": "9d124b2c-da3b-4e14-a909-a03f9abf69d6"
-            },
-            "vertices": []
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": "block"
-                },
-                "strokeDasharray": "4 3"
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "",
-              "description": "",
-              "outOfScope": true,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "Directly managed by the console application.",
-              "hasOpenThreats": false,
-              "isBidirectional": true,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              ""
-            ],
-            "id": "dd121c42-ec7a-4e08-96db-64d8448d2923",
-            "source": {
-              "cell": "ac0de558-6df2-488b-ab67-f670fea429ee",
-              "port": "b1d77f89-b93e-4f8c-b772-ec758cef1b48"
-            },
-            "target": {
-              "cell": "8539fa50-d71a-44d6-8927-3f9ba845a64b",
-              "port": "478587db-345f-4ee4-a06b-58f4fc696252"
-            },
-            "vertices": []
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": "block"
-                },
                 "strokeDasharray": null
               }
             },
@@ -949,6 +857,98 @@
                 "y": 400
               }
             ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": "4 3"
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "User Interface",
+              "description": "",
+              "outOfScope": true,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "User Interface"
+            ],
+            "id": "e780ac97-0174-43d6-86ce-060334de25e2",
+            "source": {
+              "cell": "23e35263-a361-4871-aa3c-18350f94504f",
+              "port": "8113ea95-cb0e-44b9-ae39-ae355247c2fd"
+            },
+            "target": {
+              "cell": "ac0de558-6df2-488b-ab67-f670fea429ee",
+              "port": "9d124b2c-da3b-4e14-a909-a03f9abf69d6"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": "4 3"
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "",
+              "description": "",
+              "outOfScope": true,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "Directly managed by the console application.",
+              "hasOpenThreats": false,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              ""
+            ],
+            "id": "dd121c42-ec7a-4e08-96db-64d8448d2923",
+            "source": {
+              "cell": "ac0de558-6df2-488b-ab67-f670fea429ee",
+              "port": "b1d77f89-b93e-4f8c-b772-ec758cef1b48"
+            },
+            "target": {
+              "cell": "8539fa50-d71a-44d6-8927-3f9ba845a64b",
+              "port": "478587db-345f-4ee4-a06b-58f4fc696252"
+            },
+            "vertices": []
           },
           {
             "position": {
@@ -1189,7 +1189,7 @@
           },
           {
             "position": {
-              "x": 923,
+              "x": 983,
               "y": 260
             },
             "size": {
@@ -1421,7 +1421,7 @@
               "reasonOutOfScope": "Directly managed by the console application.",
               "hasOpenThreats": false,
               "isALog": false,
-              "isEncrypted": false,
+              "isEncrypted": true,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
